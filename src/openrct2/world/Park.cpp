@@ -539,7 +539,7 @@ money16 Park::CalculateTotalRideValueForMoney() const
             }
             if (rideValue > 0)
             {
-                totalRideValue += rideValue * 2;
+                totalRideValue = AddClamp_money16(totalRideValue, rideValue * 2);
             }
         }
     }
